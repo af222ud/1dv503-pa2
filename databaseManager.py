@@ -64,3 +64,39 @@ def createTables():
   cursor.execute(phones)
   cursor.execute(reviews)
   cursor.execute(socs)
+
+def insertPhones(listOfPhones):
+  # Creates the SQL statement to use while iterating through the list.
+  statement = """INSERT IGNORE INTO phones(name, year, soc, maker, battery)
+                VALUES (%s, %s, %s, %s, %s);"""
+
+  # Execute the statement.
+  executeInsertStatement(statement, listOfPhones)
+
+def insertReviews(listOfReviews):
+  # Creates the SQL statement to use while iterating through the list.
+  statement = """INSERT IGNORE INTO reviews(model, reviewer, organization, score)
+                VALUES (%s, %s, %s, %s);"""
+
+  # Execute the statement.
+  executeInsertStatement(statement, listOfReviews)
+
+def insertSoCs(listOfSoCs):
+  # Creates the SQL statement to use while iterating through the list.
+  statement = """INSERT IGNORE INTO socs(name, clock_speed, cores, gpu)
+                VALUES (%s, %s, %s, %s);"""
+
+  # Execute the statement.
+  executeInsertStatement(statement, listOfSoCs)
+
+def executeInsertStatement(statement, listOfData):
+  global cursor
+
+  # Executes the statement for every row of data in the list.
+  for row in listOfData:
+    # Skip broken entries.
+    if row[0] == None:
+      continue
+
+    values = row
+    cursor.execute(statement, values)
