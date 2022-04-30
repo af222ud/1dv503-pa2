@@ -5,6 +5,7 @@ def printMainMenu():
   print()
   print("1. List all phone models.")
   print("2. Show critcally acclaimed devices.")
+  print("3. Show all phone models and their GPUs.")
 
   print("0. Exit application")
 
@@ -21,7 +22,9 @@ def displayNextMenu(option):
       # Display all models.
       listAllPhones()
     case '2':
-      showCritcallyAcclaimed()
+      listCritcallyAcclaimed()
+    case '3':
+      listPhonesAndGPUs()
     case '0':
       sys.exit()
     case _:
@@ -37,13 +40,25 @@ def listAllPhones():
 
   pressEnterToReturn()
 
-def showCritcallyAcclaimed():
+def listCritcallyAcclaimed():
   listOfPhones = databaseManager.getCriticallyAcclaimed()
 
   print("\nAcclaimed devices:")
-  print("--------------------")
+  print("----------------------------")
   for value in listOfPhones:
     print("   > " + value[1] + " (" + str(round(value[0], 2)) + ")")
+
+  pressEnterToReturn()
+
+def listPhonesAndGPUs():
+  listOfPhones = databaseManager.getPhoneGPUs()
+
+  print("\nDevices and their GPUs:")
+  print("---------------------------------")
+  print("     DEVICE          GPU")
+  print("---------------------------------")
+  for value in listOfPhones:
+    print("   " + value[0] + " ---> " + value[1])
 
   pressEnterToReturn()
 

@@ -139,3 +139,19 @@ def getCriticallyAcclaimed():
     criticallyAcclaimedDevices.append(attributes)
 
   return criticallyAcclaimedDevices
+
+def getPhoneGPUs():
+  global cursor
+  listOfPhones = []
+
+  # Execute the statement...
+  statement = """SELECT phones.name, socs.gpu
+                FROM phones
+                INNER JOIN socs
+                ON phones.soc = socs.name;"""
+  cursor.execute(statement)
+
+  for attributes in cursor.fetchall():
+    listOfPhones.append(attributes)
+
+  return listOfPhones

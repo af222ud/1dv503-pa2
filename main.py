@@ -9,8 +9,9 @@ connection = databaseManager.connectToDatabase()
 databaseManager.createTables()
 
 # Imports the data from the CSV-files.
-csvManager.importDataFromCSV() # Move functionality to UI later...
+csvManager.importDataFromCSV()
 
+# Creates the view.
 databaseManager.createView()
 
 connection.commit()
