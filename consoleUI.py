@@ -1,6 +1,10 @@
-from optparse import Values
 import sys
 import databaseManager
+
+def start():
+  print()
+  print("Welcome to the phone checker application!")
+  printMainMenu()
 
 def printMainMenu():
   print()
@@ -9,7 +13,8 @@ def printMainMenu():
   print("3. Show all phone models and their GPUs.")
   print("4. Show average review score per phone manufacturer.")
   print("5. Show reviewer affinity per manufacturer.")
-  print("6. Power house search. Search for CPU core count and battery capacity!")
+  print("6. Powerhouse search. Search for CPU core count and battery capacity!")
+  print("7. List all attributes of a phone model.")
   print()
   print("0. Exit application")
   print()
@@ -36,6 +41,8 @@ def displayNextMenu(option):
       listReviewerAffinityToMaker()
     case '6':
       searchForBatteryAndCoreCombination()
+    case '7':
+      displayPhone()
     case '0':
       sys.exit()
     case _:
@@ -94,8 +101,8 @@ def listReviewerAffinityToMaker():
   pressEnterToReturn()
 
 def searchForBatteryAndCoreCombination():
-  batterySize = inputNumber("Please enter your preferred battery capacity: ")
-  coreCount = inputNumber("Please enter your preferred CPU core count: ")
+  batterySize = inputNumber("\nPlease enter your preferred battery capacity: ")
+  coreCount = inputNumber("\nPlease enter your preferred CPU core count: ")
 
   matches = databaseManager.getMatchingCoreCountAndBattery(batterySize, coreCount)
 
@@ -118,6 +125,27 @@ def inputNumber(prompt):
     number = input("Please enter a valid number: ")
 
   return number
+
+def displayPhone():
+  model = input("\nPlease enter the model to view: ")
+
+  result = databaseManager.searchForPhone(model)
+
+  if len(result) == 0:
+    print("\nNo result found.")
+    pressEnterToReturn()
+
+  result = result[0]
+
+  print("\nSearch result:")
+  print("--------------------------------------------")
+  print("   " + result[3] + " " + result[0])
+  print("     - CPU:  " + result[2] + " (" + str(result[6]) + " core(s) @ " + result[5] + ")")
+  print("     - GPU:  " + result[7])
+  print("     - Battery capacity: " + str(result[4]) + " mAh")
+  print("     - Year of release: " + str(result[1]))
+
+  pressEnterToReturn()
 
 def pressEnterToReturn():
   input("\nPress ENTER to return...")

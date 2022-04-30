@@ -17,6 +17,6 @@ databaseManager.createView()
 connection.commit()
 
 # Handle main menu.
-consoleUI.printMainMenu()
+consoleUI.start()
 
 connection.close()

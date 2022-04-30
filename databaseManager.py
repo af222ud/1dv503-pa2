@@ -208,3 +208,19 @@ def getMatchingCoreCountAndBattery(batteryCapacity, coreCount):
     listOfMatches.append(values)
   
   return listOfMatches
+
+def searchForPhone(name):
+  global cursor
+  matchDetails = []
+
+  statement = """SELECT phones.*, socs.clock_speed, socs.cores, socs.gpu
+                FROM phones
+                LEFT JOIN socs
+                ON socs.name = phones.soc
+                WHERE phones.name LIKE %s"""
+  cursor.execute(statement, [name])
+
+  for attribute in cursor.fetchall():
+    matchDetails.append(attribute)
+
+  return matchDetails

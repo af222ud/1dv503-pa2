@@ -14,5 +14,6 @@ Exynos 3,2.4 GHz,8,PowerVR 8
 ARM Cortex A8,1 GHz,1,Power VR 1
 Apple A4,1.2 GHz,2,Apple GPU 1
 Apple A6,1.6 GHz,4,Apple GPU 2
+Apple A7,2 GHz,4,Apple GPU 2
 Apple A8,2 GHz,4,Apple GPU 3
 Apple A11,2.4 GHz,8,Apple GPU A11
