@@ -9,8 +9,10 @@ def printMainMenu():
   print("3. Show all phone models and their GPUs.")
   print("4. Show average review score per phone manufacturer.")
   print("5. Show reviewer affinity per manufacturer.")
-
+  print("6. Power house search. Search for CPU core count and battery capacity!")
+  print()
   print("0. Exit application")
+  print()
 
   getMainMenuInput("Please select an option: ")
 
@@ -32,6 +34,8 @@ def displayNextMenu(option):
       listAverageScorePerMaker()
     case '5':
       listReviewerAffinityToMaker()
+    case '6':
+      searchForBatteryAndCoreCombination()
     case '0':
       sys.exit()
     case _:
@@ -86,6 +90,34 @@ def listReviewerAffinityToMaker():
   print("------------------------------------------")
   for affinity in listOfReviewers:
     print("   > " + affinity[0] + " gives an average score of " + str(round(affinity[1], 2)) + " to " + affinity[2] + " products.")
+
+  pressEnterToReturn()
+
+def searchForBatteryAndCoreCombination():
+  batterySize = inputNumber("Please enter your preferred battery capacity: ")
+  coreCount = inputNumber("Please enter your preferred CPU core count: ")
+
+  matches = databaseManager.getMatchingCoreCountAndBattery(batterySize, coreCount)
+
+  print("\nMatches for the given parameters:")
+  print("------------------------------------")
+
+  if len(matches) == 0:
+    print("No matches found.")
+    pressEnterToReturn()
+
+  for phone in matches:
+    print("   > " + phone[0])
+
+  pressEnterToReturn()
+
+def inputNumber(prompt):
+  number = input(prompt)
+
+  while number.isnumeric() is False:
+    number = input("Please enter a valid number: ")
+
+  return number
 
 def pressEnterToReturn():
   input("\nPress ENTER to return...")

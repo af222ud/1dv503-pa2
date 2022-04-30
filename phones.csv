@@ -1,24 +1,24 @@
 name,year,soc,maker,battery
-Galaxy S10,2019,Snapdragon 855,Samsung,3500 mAh
-Galaxy S20,2020,Snapdragon 860,Samsung,3500 mAh
-Galaxy S21,2021,Snapdragon 865,Samsung,4000 mAh
-Galaxy S,2010,Hummingbird,Samsung,2000 mAh
-Galaxy S2,2011,ARM Cortex A9,Samsung,2500 mAh
-Galaxy S3,2012,Exynos 1,Samsung,2800 mAh
-Galaxy S4,2013,Exynos 1,Samsung,3000 mAh
-Galaxy S5,2014,Exynos 1,Samsung,3000 mAh
-Galaxy S6,2015,Exynos 2,Samsung,3000 mAh
-Galaxy S7,2016,Exynos 2,Samsung,3150 mAh
-Galaxy S8,2017,Exynos 2,Samsung,3300 mAh
-Galaxy S9,2018,Exynos 3,Samsung,3300 mAh
-iPhone 3G,2008,ARM Cortex A8,Apple,1500 mAh
-iPhone 4,2012,Apple A4,Apple,1800 mAh
-iPhone 5,2013,Apple A6,Apple,2200 mAh
-iPhone 6,2014,Apple A8,Apple,2200 mAh
-iPhone X,2017,Apple A7,Apple,3000 mAh
-iPhone XS,2018,Apple A11,Apple,2500 mAh
-iPhone XR,2019,Apple A11,Apple,3000 mAh
-iPhone SE,2018,Apple A8,Apple,1500 mAh
-iPhone 13,2021,Apple A11,Apple,3300 mAh
-iPhone 13 Mini,2021,Apple A11,Apple,2800 mAh
-iPhone 13 Pro,2021,Apple A11,Apple,3500 mAh
+Galaxy S10,2019,Snapdragon 855,Samsung,3500
+Galaxy S20,2020,Snapdragon 860,Samsung,3500
+Galaxy S21,2021,Snapdragon 865,Samsung,4000
+Galaxy S,2010,Hummingbird,Samsung,2000
+Galaxy S2,2011,ARM Cortex A9,Samsung,2500
+Galaxy S3,2012,Exynos 1,Samsung,2800
+Galaxy S4,2013,Exynos 1,Samsung,3000
+Galaxy S5,2014,Exynos 1,Samsung,3000
+Galaxy S6,2015,Exynos 2,Samsung,3000
+Galaxy S7,2016,Exynos 2,Samsung,3150
+Galaxy S8,2017,Exynos 2,Samsung,3300
+Galaxy S9,2018,Exynos 3,Samsung,3300
+iPhone 3G,2008,ARM Cortex A8,Apple,1500
+iPhone 4,2012,Apple A4,Apple,1800
+iPhone 5,2013,Apple A6,Apple,2200
+iPhone 6,2014,Apple A8,Apple,2200
+iPhone X,2017,Apple A7,Apple,3000
+iPhone XS,2018,Apple A11,Apple,2500
+iPhone XR,2019,Apple A11,Apple,3000
+iPhone SE,2018,Apple A8,Apple,1500 
+iPhone 13,2021,Apple A11,Apple,3300
+iPhone 13 Mini,2021,Apple A11,Apple,2800
+iPhone 13 Pro,2021,Apple A11,Apple,3500

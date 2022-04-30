@@ -41,7 +41,7 @@ def createTables():
                 year int,
                 soc varchar(255),
                 maker varchar(255),
-                battery varchar(255),
+                battery int,
                 PRIMARY KEY (name));"""
 
   # Creates the "reviews" table, if it does not already exist.
@@ -189,3 +189,22 @@ def getReviewerAffinityByMaker():
     listOfReviewers.append(values)
   
   return listOfReviewers
+
+def getMatchingCoreCountAndBattery(batteryCapacity, coreCount):
+  global cursor
+  listOfMatches = []
+
+  # Execute the statements...
+  statement = """SELECT name
+                FROM phones
+                WHERE battery >= %s
+                AND soc IN(
+                  SELECT name
+                  FROM socs
+                  WHERE cores >= %s);"""
+  cursor.execute(statement, [batteryCapacity, coreCount])
+
+  for values in cursor.fetchall():
+    listOfMatches.append(values)
+  
+  return listOfMatches
