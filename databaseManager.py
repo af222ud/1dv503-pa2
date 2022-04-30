@@ -101,10 +101,10 @@ def executeInsertStatement(statement, listOfData):
     values = row
     cursor.execute(statement, values)
 
-def test():
+def createView():
   global cursor
 
-  statement = """CREATE OR REPLACE VIEW CriticallyAcclmained
+  statement = """CREATE OR REPLACE VIEW CriticallyAcclaimed
                 AS SELECT AVG(score), model
                 FROM reviews
                 GROUP BY model
@@ -114,7 +114,7 @@ def test():
 
 def getPhones():
   global cursor
-  phonesNames = []
+  phoneNames = []
 
   # Execute the statement...
   statement = """SELECT name
@@ -122,6 +122,20 @@ def getPhones():
   cursor.execute(statement)
 
   for name in cursor.fetchall():
-    phonesNames.append(name[0])
+    phoneNames.append(name[0])
   
-  return phonesNames
+  return phoneNames
+
+def getCriticallyAcclaimed():
+  global cursor
+  criticallyAcclaimedDevices = []
+  
+  # Execute the statement...
+  statement = """SELECT *
+                FROM criticallyacclaimed"""
+  cursor.execute(statement)
+
+  for attributes in cursor.fetchall():
+    criticallyAcclaimedDevices.append(attributes)
+
+  return criticallyAcclaimedDevices

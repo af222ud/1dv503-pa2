@@ -4,6 +4,7 @@ import databaseManager
 def printMainMenu():
   print()
   print("1. List all phone models.")
+  print("2. Show critcally acclaimed devices.")
 
   print("0. Exit application")
 
@@ -19,6 +20,8 @@ def displayNextMenu(option):
     case '1':
       # Display all models.
       listAllPhones()
+    case '2':
+      showCritcallyAcclaimed()
     case '0':
       sys.exit()
     case _:
@@ -31,6 +34,16 @@ def listAllPhones():
   print("---------------------")
   for value in listOfPhones:
     print("   > " + value)
+
+  pressEnterToReturn()
+
+def showCritcallyAcclaimed():
+  listOfPhones = databaseManager.getCriticallyAcclaimed()
+
+  print("\nAcclaimed devices:")
+  print("--------------------")
+  for value in listOfPhones:
+    print("   > " + value[1] + " (" + str(round(value[0], 2)) + ")")
 
   pressEnterToReturn()
 

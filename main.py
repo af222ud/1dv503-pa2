@@ -11,7 +11,7 @@ databaseManager.createTables()
 # Imports the data from the CSV-files.
 csvManager.importDataFromCSV() # Move functionality to UI later...
 
-databaseManager.test()
+databaseManager.createView()
 
 connection.commit()
 
