@@ -1,5 +1,6 @@
 import databaseManager
 import csvManager
+import consoleUI
 
 # Attempt to connect to the database.
 connection = databaseManager.connectToDatabase()
@@ -13,4 +14,8 @@ csvManager.importDataFromCSV() # Move functionality to UI later...
 databaseManager.test()
 
 connection.commit()
+
+# Handle main menu.
+consoleUI.printMainMenu()
+
 connection.close()

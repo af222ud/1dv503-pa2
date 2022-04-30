@@ -111,3 +111,17 @@ def test():
                 HAVING AVG(score) >= 8;"""
 
   cursor.execute(statement)
+
+def getPhones():
+  global cursor
+  phonesNames = []
+
+  # Execute the statement...
+  statement = """SELECT name
+                  FROM phones;"""
+  cursor.execute(statement)
+
+  for name in cursor.fetchall():
+    phonesNames.append(name[0])
+  
+  return phonesNames
