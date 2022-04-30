@@ -8,7 +8,9 @@ connection = databaseManager.connectToDatabase()
 databaseManager.createTables()
 
 # Imports the data from the CSV-files.
-csvManager.importDataFromCSV()
+csvManager.importDataFromCSV() # Move functionality to UI later...
+
+databaseManager.test()
 
 connection.commit()
 connection.close()

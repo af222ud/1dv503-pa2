@@ -100,3 +100,14 @@ def executeInsertStatement(statement, listOfData):
 
     values = row
     cursor.execute(statement, values)
+
+def test():
+  global cursor
+
+  statement = """CREATE OR REPLACE VIEW CriticallyAcclmained
+                AS SELECT AVG(score), model
+                FROM reviews
+                GROUP BY model
+                HAVING AVG(score) >= 8;"""
+
+  cursor.execute(statement)

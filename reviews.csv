@@ -2,3 +2,57 @@ model,reviewer,organization,score
 Galaxy S10,Frank Franksson,Phone Reviews Ltd.,8
 Galaxy S20,Frank Franksson,Phone Reviews Ltd.,9
 Galaxy S21,Hank Hanksson,IGN,2
+Galaxy S,Frank Franksson,Phone Reviews Ltd.,4
+Galaxy S,Hank Hanksson,IGN,10
+Galaxy S,Fredrik Fredriksson,Extreme Reviews,9
+Galaxy S2,Hank Hanksson,IGN,5
+Galaxy S2,Frank Franksson,Phone Reviews Ltd.,1
+Galaxy S3,Hank Hanksson,IGN,10
+Galaxy S4,Frank Franksson,Phone Reviews Ltd.,10
+Galaxy S5,Hank Hanksson,IGN,9
+Galaxy S5,Fredrik Fredriksson,Extreme Reviews,7
+Galaxy S5,Frank Franksson,Phone Reviews Ltd.,3
+Galaxy S5,Hank Hanksson,IGN,2
+Galaxy S6,Hank Hanksson,IGN,7
+Galaxy S6,Frank Franksson,Phone Reviews Ltd.,9
+Galaxy S7,Hank Hanksson,IGN,4
+Galaxy S7,Frank Franksson,Phone Reviews Ltd.,6
+Galaxy S7,Fredrik Fredriksson,Extreme Reviews,8
+Galaxy S7,Sven Svensson,Phonies.com,7
+Galaxy S8,Frank Franksson,Phone Reviews Ltd.,10
+Galaxy S8,Hank Hanksson,IGN,9
+Galaxy S9,Hank Hanksson,IGN,7
+Galaxy S9,Frank Franksson,Phone Reviews Ltd.,8
+Galaxy S9,Fredrik Fredriksson,Extreme Reviews,9
+Galaxy S10,Frank Franksson,Phone Reviews Ltd.,10
+Galaxy S10,Hank Hanksson,IGN,10
+Galaxy S10,Fredrik Fredriksson,Extreme Reviews,7
+iPhone 3G,Frank Franksson,Phone Reviews Ltd.,8
+iPhone 3G,Hank Hanksson,IGN,2
+iPhone 3G,Fredrik Fredriksson,Extreme Reviews,7
+iPhone 4,Frank Franksson,Phone Reviews Ltd.,8
+iPhone 4,Hank Hanksson,IGN,8
+iPhone 5,Frank Franksson,Phone Reviews Ltd.,8
+iPhone 5,Hank Hanksson,IGN,10
+iPhone 5,Fredrik Fredriksson,Extreme Reviews,10
+iPhone 6,Frank Franksson,Phone Reviews Ltd.,8
+iPhone 6,Hank Hanksson,IGN,6
+iPhone X,Frank Franksson,Phone Reviews Ltd.,4
+iPhone XS,Frank Franksson,Phone Reviews Ltd.,9
+iPhone XS,Hank Hanksson,IGN,3
+iPhone XS,Fredrik Fredriksson,Extreme Reviews,10
+iPhone XR,Frank Franksson,Phone Reviews Ltd.,8
+iPhone XR,Hank Hanksson,IGN,7
+iPhone XR,Fredrik Fredriksson,Extreme Reviews,9
+iPhone XR,Sven Svensson,Phonies.com,5
+iPhone SE,Frank Franksson,Phone Reviews Ltd.,8
+iPhone SE,Hank Hanksson,IGN,8
+iPhone 13,Frank Franksson,Phone Reviews Ltd.,8
+iPhone 13,Hank Hanksson,IGN,6
+iPhone 13,Sven Svensson,Phonies.com,10
+iPhone 13,Fredrik Fredriksson,Extreme Reviews,7
+iPhone 13 Mini,Frank Franksson,Phone Reviews Ltd.,8
+iPhone 13 Pro,Frank Franksson,Phone Reviews Ltd.,8
+iPhone 13 Pro,Hank Hanksson,IGN,5
+iPhone 13 Pro,Fredrik Fredriksson,Extreme Reviews,9
+iPhone 13 Pro,Sven Svensson,Phonies.com,4
