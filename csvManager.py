@@ -22,7 +22,9 @@ def importDataFromCSV():
   databaseManager.insertSoCs(socs)
 
 def readFiles():
+  "Imports the CSV data."
   try:
+    # Open the files.
     phonesFile = open('phones.csv')
     reviewsFile = open('reviews.csv')
     socsFile = open('socs.csv')
@@ -39,30 +41,20 @@ def readFiles():
     print('There was an issue opening the CSV-files. The application will now close.')
     sys.exit()
 
-def importCSV(data):
+def importCSV(file):
   "Iterates through the CSV data, adds it to a list and returns it."
   # Initialize list and header skipping bool.
   csvAsList = []
   skipHeader = True
 
   # Iterate through the entire file.
-  for row in data:
+  for row in file:
     # Skips the header.
     if skipHeader:
       skipHeader = False
       continue
 
     # Create a list from the row and add it to the list.
-    listEntry = correctMissingValues(row)
-    csvAsList.append(listEntry)
+    csvAsList.append(list(row))
 
   return csvAsList
-
-def correctMissingValues(entry):
-  "Converts the passed iterator to a list and alters \"NA\" values to None."
-  entry = list(entry)
-
-  # Replaces "NA" with None, if there are any.
-  entry = [None if column=="NA" else column for column in entry]
-
-  return entry

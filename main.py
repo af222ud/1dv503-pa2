@@ -13,10 +13,10 @@ csvManager.importDataFromCSV()
 
 # Creates the view.
 databaseManager.createView()
-
 connection.commit()
 
-# Handle main menu.
+# Starts the console UI.
 consoleUI.start()
 
+# Disconnects from the database.
 connection.close()
