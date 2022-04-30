@@ -155,3 +155,37 @@ def getPhoneGPUs():
     listOfPhones.append(attributes)
 
   return listOfPhones
+
+def getAverageScorePerMaker():
+  global cursor
+  listOfMakers = []
+
+  # Execute the statement...
+  statement = """SELECT AVG(reviews.score), phones.maker
+                FROM reviews
+                INNER JOIN phones
+                ON phones.name = reviews.model
+                GROUP BY phones.maker;"""
+  cursor.execute(statement)
+
+  for maker in cursor.fetchall():
+    listOfMakers.append(maker)
+
+  return listOfMakers
+
+def getReviewerAffinityByMaker():
+  global cursor
+  listOfReviewers = []
+
+  # Execute the statement...
+  statement = """SELECT reviews.reviewer, AVG(reviews.score), phones.maker
+                FROM reviews
+                INNER JOIN phones
+                ON phones.name = reviews.model
+                GROUP BY reviews.reviewer, phones.maker;"""
+  cursor.execute(statement)
+
+  for values in cursor.fetchall():
+    listOfReviewers.append(values)
+  
+  return listOfReviewers

@@ -4,13 +4,13 @@ Snapdragon 860,2.4 GHz,8,Adreno 610
 Snapdragon 865,2.6 GHz,8,Adreno 620
 Hummingbird,1 GHz,2,PowerVR 1
 ARM Cortex A9,1.2 GHz,2,Mali-400 MP
-Exynos S3,1.3 GHz,2,PowerVR 2
+Exynos 1,1.3 GHz,2,PowerVR 2
 Exynos S4,1.5 GHz,4,PowerVR 3
 Exynos S5,1.7 GHz,4,PowerVR 4
-Exynos S6,1.9 GHz,4,PowerVR 5
+Exynos 2,1.9 GHz,4,PowerVR 5
 Exynos S7,2.0 GHz,6,PowerVR 6
 Exynos S8,2.1 GHz,8,PowerVR 7
-Exynos S9,2.4 GHz,8,PowerVR 8
+Exynos 3,2.4 GHz,8,PowerVR 8
 ARM Cortex A8,1 GHz,1,Power VR 1
 Apple A4,1.2 GHz,2,Apple GPU 1
 Apple A6,1.6 GHz,4,Apple GPU 2
