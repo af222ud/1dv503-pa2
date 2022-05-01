@@ -11,7 +11,11 @@ def importDataFromCSV():
   global socs
   global reviews
 
-  readFiles()
+  try:
+    readFiles()
+  except:
+    print("No CSV-files found. Attempt to continue...")
+    return
 
   phones = importCSV(phones)
   socs = importCSV(socs)
@@ -23,23 +27,19 @@ def importDataFromCSV():
 
 def readFiles():
   "Imports the CSV data."
-  try:
-    # Open the files.
-    phonesFile = open('phones.csv')
-    reviewsFile = open('reviews.csv')
-    socsFile = open('socs.csv')
+  # Open the files.
+  phonesFile = open('phones.csv')
+  reviewsFile = open('reviews.csv')
+  socsFile = open('socs.csv')
 
-    global phones
-    global socs
-    global reviews
+  global phones
+  global socs
+  global reviews
 
-    # Import the CSV-data.
-    phones = csv.reader(phonesFile)
-    socs = csv.reader(socsFile)
-    reviews = csv.reader(reviewsFile)
-  except:
-    print('There was an issue opening the CSV-files. The application will now close.')
-    sys.exit()
+  # Import the CSV-data.
+  phones = csv.reader(phonesFile)
+  socs = csv.reader(socsFile)
+  reviews = csv.reader(reviewsFile)
 
 def importCSV(file):
   "Iterates through the CSV data, adds it to a list and returns it."

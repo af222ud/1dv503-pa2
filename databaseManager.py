@@ -143,7 +143,7 @@ def getCriticallyAcclaimed():
   criticallyAcclaimedDevices = []
   
   statement = """SELECT *
-                FROM criticallyacclaimed"""
+                FROM criticallyacclaimed;"""
   cursor.execute(statement)
 
   # Append the attributes (names and average review score) to the list.
@@ -230,11 +230,14 @@ def searchForPhone(name):
   global cursor
   matchDetails = []
 
-  statement = """SELECT phones.*, socs.clock_speed, socs.cores, socs.gpu
+  statement = """SELECT phones.*, socs.clock_speed, socs.cores, socs.gpu, AVG(reviews.score)
                 FROM phones
-                LEFT JOIN socs
+                INNER JOIN socs
                 ON socs.name = phones.soc
-                WHERE phones.name LIKE %s"""
+                INNER JOIN reviews
+                ON reviews.model = phones.name
+                WHERE phones.name LIKE %s
+                GROUP BY phones.name;"""
   cursor.execute(statement, [name])
 
   # Adds the attributes into the list.

@@ -115,8 +115,8 @@ def listReviewerAffinityToMaker():
 
 def searchForBatteryAndCoreCombination():
   "Displays a list of phones matching the user's input."
-  batterySize = inputNumber("\nPlease enter your preferred battery capacity: ")
-  coreCount = inputNumber("\nPlease enter your preferred CPU core count: ")
+  batterySize = inputNumber("\nPlease enter your preferred minimum battery capacity: ")
+  coreCount = inputNumber("\nPlease enter your preferred minimum CPU core count: ")
 
   matches = databaseManager.getMatchingCoreCountAndBattery(batterySize, coreCount)
 
@@ -166,6 +166,7 @@ def displayPhone():
   print("     - GPU:  " + result[7]) # Prints the GPU name.
   print("     - Battery capacity: " + str(result[4]) + " mAh") # Prints the battery capacity.
   print("     - Year of release: " + str(result[1])) # Prints the year of release.
+  print("     - Average review score: " + str(round(result[8], 2)))
 
   pressEnterToReturn()
 
