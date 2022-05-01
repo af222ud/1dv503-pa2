@@ -11,7 +11,7 @@ def printMainMenu():
   "Prints the main menu."
   print()
   print("1. List all phone models.")
-  print("2. Show critcally acclaimed devices.")
+  print("2. Show critically acclaimed devices.")
   print("3. Show all phone models and their GPUs.")
   print("4. Show average review score per phone manufacturer.")
   print("5. Show reviewer affinity per manufacturer.")
