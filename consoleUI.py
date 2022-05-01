@@ -56,7 +56,8 @@ def listAllPhones():
   listOfPhones = databaseManager.getPhones()
 
   # Prints the menu.
-  print("\nList of phone models:")
+  print("\n---------------------")
+  print("List of phone models:")
   print("---------------------")
   for value in listOfPhones:
     print("   > " + value)
@@ -68,7 +69,8 @@ def listCritcallyAcclaimed():
   listOfPhones = databaseManager.getCriticallyAcclaimed()
 
   # Prints the menu.
-  print("\nAcclaimed devices:")
+  print("\n----------------------------")
+  print("Acclaimed devices:")
   print("----------------------------")
   for value in listOfPhones:
     print("   > " + value[1] + " (" + str(round(value[0], 2)) + ")")
@@ -80,9 +82,8 @@ def listPhonesAndGPUs():
   listOfPhones = databaseManager.getPhoneGPUs()
 
   # Prints the menu.
-  print("\nDevices and their GPUs:")
-  print("---------------------------------")
-  print("     DEVICE          GPU")
+  print("\n---------------------------------")
+  print("Devices and their GPUs:")
   print("---------------------------------")
   for value in listOfPhones:
     print("   " + value[0] + " ---> " + value[1])
@@ -94,7 +95,8 @@ def listAverageScorePerMaker():
   listOfMakers = databaseManager.getAverageScorePerMaker()
 
   # Prints the menu.
-  print("\nAverage review score per maker:")
+  print("\n----------------------------------")
+  print("Average review score per maker:")
   print("----------------------------------")
   for value in listOfMakers:
     print("   > " + value[1] + " ----> " + str(round(value[0], 2)))
@@ -106,7 +108,8 @@ def listReviewerAffinityToMaker():
   listOfReviewers = databaseManager.getReviewerAffinityByMaker()
 
   # Prints the menu.
-  print("\nReviewer affinity by phone manufacturer:")
+  print("\n------------------------------------------")
+  print("Reviewer affinity by phone manufacturer:")
   print("------------------------------------------")
   for affinity in listOfReviewers:
     print("   > " + affinity[0] + " gives an average score of " + str(round(affinity[1], 2)) + " to " + affinity[2] + " products.")
@@ -121,7 +124,8 @@ def searchForBatteryAndCoreCombination():
   matches = databaseManager.getMatchingCoreCountAndBattery(batterySize, coreCount)
 
   # Prints the menu.
-  print("\nMatches for the given parameters:")
+  print("\n------------------------------------")
+  print("Matches for the given parameters:")
   print("------------------------------------")
 
   # If no match was found, do not attempt to print the attributes.
@@ -159,14 +163,14 @@ def displayPhone():
   result = result[0] # Truncate the tuple if it exists.
 
   # Prints the menu.
-  print("\nSearch result:")
-  print("--------------------------------------------")
-  print("   " + result[3] + " " + result[0]) # Prints the phone's maker and name.
-  print("     - CPU:  " + result[2] + " (" + str(result[6]) + " core(s) @ " + result[5] + ")") # Prints the CPU information.
-  print("     - GPU:  " + result[7]) # Prints the GPU name.
-  print("     - Battery capacity: " + str(result[4]) + " mAh") # Prints the battery capacity.
-  print("     - Year of release: " + str(result[1])) # Prints the year of release.
-  print("     - Average review score: " + str(round(result[8], 2)))
+  print("\n------------------------------------------------------------")
+  print(result[3] + " " + result[0]) # Prints the phone's maker and name.
+  print("------------------------------------------------------------")
+  print("- CPU:                     " + result[2] + " (" + str(result[6]) + " core(s) @ " + result[5] + ")") # Prints the CPU information.
+  print("- GPU:                     " + result[7]) # Prints the GPU name.
+  print("- Battery capacity:        " + str(result[4]) + " mAh") # Prints the battery capacity.
+  print("- Year of release:         " + str(result[1])) # Prints the year of release.
+  print("- Average review score:    " + str(round(result[8], 2)))
 
   pressEnterToReturn()
 
